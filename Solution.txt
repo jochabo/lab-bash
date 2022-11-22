@@ -1,0 +1,180 @@
+/Users/josephinebonvin/.zprofile:1: command not found: ^[^[^[^[^[
+(base) josephinebonvin@MacBook-Pro-4 ~ % ls
+Applications	Downloads	Library		Pictures	opt
+Desktop		Dropbox		Movies		Sites		temp
+Documents	IH-Labs		Music		Untitled.ipynb
+(base) josephinebonvin@MacBook-Pro-4 ~ % cd IH-Labs
+(base) josephinebonvin@MacBook-Pro-4 IH-Labs % ls
+PreWork		lab-bash
+(base) josephinebonvin@MacBook-Pro-4 IH-Labs % cd lab-bash
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % ls
+exercices	inputs		lorem		lorem-copy	outputs		readme.md
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % cd lorem
+(base) josephinebonvin@MacBook-Pro-4 lorem % ls
+at.txt		at.txte		lorem.txt	sed.txt
+(base) josephinebonvin@MacBook-Pro-4 lorem % cp sed.txt ../lorem-copy
+(base) josephinebonvin@MacBook-Pro-4 lorem % cd ../
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % ls
+exercices	inputs		lorem		lorem-copy	outputs		readme.md
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % cd lorem
+(base) josephinebonvin@MacBook-Pro-4 lorem % ls
+at.txt		at.txte		lorem.txt	sed.txt
+(base) josephinebonvin@MacBook-Pro-4 lorem % cp at.txt at.txte lorem.txt ../lorem-copy
+(base) josephinebonvin@MacBook-Pro-4 lorem % cd ../
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % ks
+zsh: command not found: ks
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % ls
+exercices	inputs		lorem		lorem-copy	outputs		readme.md
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % cd lorem-copy
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % ls
+at.txt		at.txte		dummy_file.txt	lorem.txt	sed.txt
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % ../lorem
+zsh: permission denied: ../lorem
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % ../
+zsh: permission denied: ../
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % cd ../
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % cd lorem
+(base) josephinebonvin@MacBook-Pro-4 lorem % cat sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+(base) josephinebonvin@MacBook-Pro-4 lorem % cat at.txt
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga.
+Et harum quidem rerum facilis est ET expedita distinctio.
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET
+ut ET voluptates repudiandae sint ET molestiae non recusandae.
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores
+alias consequatur aut perferendis doloribus asperiores repellat
+(base) josephinebonvin@MacBook-Pro-4 lorem % cat lorem.txt
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.%
+(base) josephinebonvin@MacBook-Pro-4 lorem % cd ../
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % cd lorem-copy
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % ls
+at.txt		at.txte		dummy_file.txt	lorem.txt	sed.txt
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % headsed -n ‘0,5p’ sed.txt
+zsh: command not found: headsed
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % sed -n ‘0,5p’ sed.txt
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % head -0 sed.txt | tail +5
+head: illegal line count -- 0
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % head -1 sed.txt | tail +5
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % head -5 sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % head -3 sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % tail -3 sed.txt
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % “Homo homini lupus.” >> sed.txt
+zsh: command not found: Homo homini lupus.
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % echo “Homo homini lupus.” >> sed.txt
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % tail -1 sed.txt
+Homo homini lupus.
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % tail -3 sed.txt
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+Homo homini lupus.
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % cat at.txt
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga.
+Et harum quidem rerum facilis est ET expedita distinctio.
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET
+ut ET voluptates repudiandae sint ET molestiae non recusandae.
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores
+alias consequatur aut perferendis doloribus asperiores repellat
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % sed -r -i.bak ‘s/ET/et/g’ ~/atr.txt
+sed: /Users/josephinebonvin/atr.txt: No such file or directory
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % sed -r -i.bak ‘s/ET/et/g’ ~/at.txt
+sed: /Users/josephinebonvin/at.txt: No such file or directory
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % sed -i ‘’“s/ET/et/g” at.txt
+sed: 1: “at.txt”: command a expects \ followed by text
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % sed -i ‘s/ET/et/g’ at.txt
+sed: 1: “at.txt”: command a expects \ followed by text
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % ls
+at.txt		at.txte		dummy_file.txt	lorem.txt	sed.txt
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % sed -i ‘’ ‘s/ET/et/g’ at.txt
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % cat at.txt
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+Et harum quidem rerum facilis est et expedita distinctio.
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet
+ut et voluptates repudiandae sint et molestiae non recusandae.
+Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores
+alias consequatur aut perferendis doloribus asperiores repellat
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % id -un
+josephinebonvin
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % pwd
+/Users/josephinebonvin/IH-Labs/lab-bash/lorem-copy
+(base) josephinebonvin@MacBook-Pro-4 lorem-copy % cd ../
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % cd lorem
+(base) josephinebonvin@MacBook-Pro-4 lorem % find . -type f -name “*.txt”
+./at.txt
+./lorem.txt
+./sed.txt
+(base) josephinebonvin@MacBook-Pro-4 lorem % wc -l sed.txt
+       9 sed.txt
+(base) josephinebonvin@MacBook-Pro-4 lorem % cd ../
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % ls /some/path/some/dir/lorem_*.txt
+zsh: no matches found: /some/path/some/dir/lorem_*.txt
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % find -name “*lorem*” | wc -l
+find: illegal option -- n
+usage: find [-H | -L | -P] [-EXdsx] [-f path] path ... [expression]
+       find [-H | -L | -P] [-EXdsx] -f path [path ...] [expression]
+       0
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % find -name “lorem*” | wc -l
+find: illegal option -- n
+usage: find [-H | -L | -P] [-EXdsx] [-f path] path ... [expression]
+       find [-H | -L | -P] [-EXdsx] -f path [path ...] [expression]
+       0
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % ls | wc -l
+       6
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % tree ‘lorem*’ | wc -l
+zsh: command not found: tree
+       0
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % find . -type f -name “lorem*”
+./lorem-copy/lorem.txt
+./lorem/lorem.txt
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % find . -type f -name “lorem*” | wc -l
+       2
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % read name
+josephinebonvin
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % echo $name
+josephinebonvin
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % mkdir $name
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % ls
+exercices	josephinebonvin	lorem-copy	readme.md
+inputs		lorem		outputs
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % rmdir $name
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % ls
+exercices	inputs		lorem		lorem-copy	outputs		readme.md
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % echo Hello World!
+Hello World!
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % mkdir new_dir
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % rmdir new_dir
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % git add .
+(base) josephinebonvin@MacBook-Pro-4 lab-bash % git status
